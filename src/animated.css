@@ -1,0 +1,84 @@
+/* Keyframe Animations */
+
+/* Background Animation: Smooth gradient moving effect */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, #6a1b9a, #007bff, #ff5722, #4caf50);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+/* Fade In for the App */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.app {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Slide-in animation for Sidebar */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Hover effects for Movie Cards */
+@keyframes cardHover {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.movie-card:hover {
+    animation: cardHover 0.3s ease-in-out forwards;
+}
+
+/* Fade In for movie titles */
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.movie-card h3 {
+    animation: fadeInTitle 1s ease-out;
+}
